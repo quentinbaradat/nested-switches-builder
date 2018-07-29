@@ -1,4 +1,3 @@
-
 // NestedSwitchesBuilderTests.cs
 //
 // Copyright © 2018 Quentin Baradat
@@ -10,7 +9,7 @@
 // except according to those terms.
 
 using System;
-using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace NestedSwitchesBuilder.Tests
@@ -22,16 +21,16 @@ namespace NestedSwitchesBuilder.Tests
         {
 
             NestedSwitchesBuilder<char, Func<String>> builder = new NestedSwitchesBuilder<char, Func<String>>();
-            builder.Add(new List<char>() { 'A', 'C', 'F' }, () => "acf");
-            builder.Add(new List<char>() { 'A', 'C', 'V' }, () => "acv");
-            builder.Add(new List<char>() { 'A', 'G' }, () => "ag");
-            builder.Add(new List<char>() { 'E', 'C' }, () => "ec");
+            builder.Add("ACF".AsEnumerable(), () => "acf");
+            builder.Add("ACV".AsEnumerable(), () => "acv");
+            builder.Add("AG".AsEnumerable(), () => "ag");
+            builder.Add("EC".AsEnumerable(), () => "ec");
             var nestedSwitches = builder.Build();
 
-            Assert.Equal("acf", nestedSwitches(new List<char>() { 'A', 'C', 'F' })());
-            Assert.Equal("acv", nestedSwitches(new List<char>() { 'A', 'C', 'V' })());
-            Assert.Equal("ag", nestedSwitches(new List<char>() { 'A', 'G' })());
-            Assert.Equal("ec", nestedSwitches(new List<char>() { 'E', 'C' })());
+            Assert.Equal("acf", nestedSwitches("ACF".AsEnumerable())());
+            Assert.Equal("acv", nestedSwitches("ACV".AsEnumerable())());
+            Assert.Equal("ag", nestedSwitches("AG".AsEnumerable())());
+            Assert.Equal("ec", nestedSwitches("EC".AsEnumerable())());
         }
 
         [Fact]
@@ -39,16 +38,16 @@ namespace NestedSwitchesBuilder.Tests
         {
 
             NestedSwitchesBuilder<char, Func<String>> builder = new NestedSwitchesBuilder<char, Func<String>>();
-            builder.Add(new List<char>() { 'A', 'C', 'F' }, () => "acf");
-            builder.Add(new List<char>() { 'A', 'C', 'V' }, () => "acv");
-            builder.Add(new List<char>() { 'A', 'G' }, () => "ag");
-            builder.Add(new List<char>() { 'E', 'C' }, () => "ec");
+            builder.Add("ACF".AsEnumerable(), () => "acf");
+            builder.Add("ACV".AsEnumerable(), () => "acv");
+            builder.Add("AG".AsEnumerable(), () => "ag");
+            builder.Add("EC".AsEnumerable(), () => "ec");
             var nestedSwitches = builder.Build();
 
-            Assert.Null(nestedSwitches(new List<char>() { 'A', 'C', 'E' }));
-            Assert.Null(nestedSwitches(new List<char>() { 'A', 'C' }));
-            Assert.Null(nestedSwitches(new List<char>() { 'I' }));
-            Assert.Null(nestedSwitches(new List<char>()));
+            Assert.Null(nestedSwitches("ACE".AsEnumerable()));
+            Assert.Null(nestedSwitches("AC".AsEnumerable()));
+            Assert.Null(nestedSwitches("I".AsEnumerable()));
+            Assert.Null(nestedSwitches("".AsEnumerable()));
         }
     }
 }
