@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NestedSwitchesBuilder", "src\NestedSwitchesBuilder\NestedSwitchesBuilder.csproj", "{EE4780FA-2956-4964-9E8B-F2DA9C91A57D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedSwitchesBuilder.Tests", "tests\NestedSwitchesBuilder.Tests\NestedSwitchesBuilder.Tests.csproj", "{096CEEFF-F242-46CD-96EF-F29648BFD315}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE4780FA-2956-4964-9E8B-F2DA9C91A57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4780FA-2956-4964-9E8B-F2DA9C91A57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4780FA-2956-4964-9E8B-F2DA9C91A57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4780FA-2956-4964-9E8B-F2DA9C91A57D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{096CEEFF-F242-46CD-96EF-F29648BFD315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{096CEEFF-F242-46CD-96EF-F29648BFD315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{096CEEFF-F242-46CD-96EF-F29648BFD315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{096CEEFF-F242-46CD-96EF-F29648BFD315}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1999B9DF-5F94-46CF-ADE1-4BF87502BB28}
+	EndGlobalSection
+EndGlobal
