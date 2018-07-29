@@ -15,13 +15,13 @@ switch (path[0])
         switch (path[1])
         {
             case 'B':
-                switch (path[1])
+                switch (path[2])
                 {
                     case 'C':
-                        result = "abc"
+                        result = "abc";
                         break;
                     case 'D':
-                        result = "abd"
+                        result = "abd";
                         break;
                 }
                 break;
